@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>검색 페이지</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -34,14 +34,11 @@
             display: block;
             margin-bottom: 5px;
         }
-        .form-group input, .form-group textarea {
+        .form-group input {
             width: calc(100% - 22px);
             padding: 10px;
             border: 1px solid #ccc;
             border-radius: 4px;
-        }
-        .form-group textarea {
-            resize: vertical;
         }
         .form-group button {
             padding: 10px 20px;
@@ -58,26 +55,23 @@
 </head>
 <body>
     <div class="container">
-        <h1>Title</h1>
-        <p>Description text goes here.</p>
+        <h1>검색 페이지</h1>
+        <p>구글과 유튜브 검색을 위한 페이지입니다.</p>
         
         <div class="form-group">
-            <label for="input1">Input Label 1:</label>
-            <input type="text" id="input1" name="input1">
+            <label for="google-search">구글 검색:</label>
+            <form action="https://www.google.com/search" method="get" target="_blank">
+                <input type="text" id="google-search" name="q">
+                <button type="submit">검색</button>
+            </form>
         </div>
 
         <div class="form-group">
-            <label for="input2">Input Label 2:</label>
-            <input type="text" id="input2" name="input2">
-        </div>
-
-        <div class="form-group">
-            <label for="textarea">Textarea Label:</label>
-            <textarea id="textarea" name="textarea" rows="4"></textarea>
-        </div>
-
-        <div class="form-group">
-            <button type="submit">Submit</button>
+            <label for="youtube-search">유튜브 검색:</label>
+            <form action="https://www.youtube.com/results" method="get" target="_blank">
+                <input type="text" id="youtube-search" name="search_query">
+                <button type="submit">검색</button>
+            </form>
         </div>
     </div>
 </body>
